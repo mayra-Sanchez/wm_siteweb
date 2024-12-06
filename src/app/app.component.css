@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .home {
+    display: flex;
+    flex-direction: column;  
+    height: 100%;            
+    justify-content: flex-start; 
+    width: 100%;             
+    padding: 0;
+  }
+  
+  h2, h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  
+  
