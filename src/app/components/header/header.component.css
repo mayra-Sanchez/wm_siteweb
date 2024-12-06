@@ -1,0 +1,136 @@
+.header {
+    font-family: 'Montserrat', sans-serif;
+    background: #000; 
+    background-size: auto 200%; 
+    background-position: top; 
+    color: #fff;
+    border-bottom: 2px solid #ad0d0d; 
+}
+
+.header-top {
+    background-color: rgba(0, 0, 0, 0.85); 
+    text-align: center;
+    font-size: 12px;
+    padding: 8px 0;
+    animation: pulse-text 3s infinite; 
+}
+
+.header-nav {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent; 
+    padding: 0 40px;
+    background-color: rgba(0, 0, 0, 0.85); 
+    height: 70px;
+    border-top: 2px solid #fff;
+}
+ 
+  .logo img {
+    height: 68px; 
+    max-width: 100%;
+  }
+  
+.menu {
+    display: flex;
+    gap: 30px;
+    position: relative;
+  }
+  
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 20px 20px;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+
+  .menu a:first-child::before {
+    content: '';
+    position: absolute;
+    height: 20px; 
+    width: 3px; 
+    background-color: #fff;
+    left: -12px; 
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .menu a:not(:first-child)::before {
+    content: '';
+    position: absolute;
+    height: 20px; 
+    width: 3px;
+    background-color: #fff;
+    left: -12px; 
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .menu a:last-child::after {
+    content: '';
+    position: absolute;
+    height: 20px; 
+    width: 3px; 
+    background-color: #fff;
+    right: -12px; 
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .menu a:hover {
+    color: #ad0d0d; 
+  }
+  
+  .icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icons a {
+    color: #fff;
+    font-size: 35px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .icons a:hover {
+    color: #ad0d0d; 
+  }
+
+  @keyframes pulse-text {
+    0%, 100% {
+      text-shadow: 0 0 5px #fff, 0 0 10px #ad0d0d, 0 0 20px #ad0d0d;
+      transform: scale(1);
+    }
+    50% {
+      text-shadow: 0 0 10px #fff, 0 0 20px #ad0d0d, 0 0 30px #ad0d0d;
+      transform: scale(1.05);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header-nav {
+      flex-direction: column;
+      text-align: center;
+      height: auto;
+    }
+  
+    .menu {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .icons {
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .menu a:first-child::before,
+    .menu a:not(:first-child)::before,
+    .menu a:last-child::after {
+        content: none; 
+    }
+  }
+  
