@@ -16,9 +16,6 @@ import { PurchaseHistoryComponent } from './components/Custom/purchase-history/p
 import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { MisionComponent } from './components/mision/mision.component';
-import { VisionComponent } from './components/vision/vision.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,9 +30,7 @@ import { VisionComponent } from './components/vision/vision.component';
     PurchaseHistoryComponent,
     LoginComponent,
     HeaderComponent,
-    FooterComponent,
-    MisionComponent,
-    VisionComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
