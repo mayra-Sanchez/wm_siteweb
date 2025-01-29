@@ -1,0 +1,71 @@
+<div class="product-management">
+    <h2>Gestión de Productos</h2>
+  
+    <!-- Botón para abrir el modal -->
+    <button (click)="openModal()" class="btn-add">Agregar Producto</button>
+  
+    <!-- Tabla para mostrar productos -->
+    <table class="product-table">
+      <thead>
+        <tr>
+          <th>Imagen</th>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Categoría</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>
+            <img [src]="product.imagen" alt="{{ product.nombre }}" *ngIf="product.imagen" class="product-image" />
+          </td>
+          <td>{{ product.nombre }}</td>
+          <td>{{ product.descripcion }}</td>
+          <td>${{ product.precio }}</td>
+          <td>{{ product.stock }}</td>
+          <td>{{ product.categoria }}</td>
+          <td>
+            <button (click)="editProduct(product)" class="btn-edit">Editar</button>
+            <button (click)="deleteProduct(product.id)" class="btn-delete">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Modal para agregar/editar productos -->
+    <div class="modal" [class.show]="isModalOpen">
+        <div class="modal-overlay" *ngIf="isModalOpen" (click)="closeModal()"></div>
+        <div class="modal-container" *ngIf="isModalOpen">
+          <div class="modal-header">
+            <h2>{{ editMode ? 'Editar Producto' : 'Agregar Producto' }}</h2>
+            <button class="modal-close" (click)="closeModal()">×</button>
+          </div>
+          <form (ngSubmit)="onSubmit()" [formGroup]="productForm" class="modal-form">
+            <label for="nombre">Nombre del producto</label>
+            <input formControlName="nombre" type="text" placeholder="Nombre del producto" required />
+            <label for="descripcion">Descripción del producto</label>
+            <textarea formControlName="descripcion" placeholder="Descripción" required></textarea>
+            <label for="precio">Precio</label>
+            <input formControlName="precio" type="number" placeholder="Precio" required />
+            <label for="stock">Stock</label>
+            <input formControlName="stock" type="number" placeholder="Stock" required />
+            <label for="categoria">Categoría</label>
+            <select formControlName="categoria" id="categoria" required>
+              <option *ngFor="let categoria of categorias" [value]="categoria.id">
+                {{ categoria.nombre }}
+              </option>
+            </select>
+            <label for="imagen">Imagen</label>
+            <input formControlName="imagen" id="imagen" type="file" (change)="onFileChange($event)" />
+            <div style="display: flex; justify-content: space-between;">
+              <button type="submit">{{ editMode ? 'Actualizar' : 'Agregar' }}</button>
+              <button type="button" (click)="resetForm()" class="btn-cancel">Cancelar</button>
+            </div>
+          </form>
+        </div>        
+    </div>
+  </div>
+  

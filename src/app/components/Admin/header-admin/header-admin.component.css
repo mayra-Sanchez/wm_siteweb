@@ -1,0 +1,21 @@
+header {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ad0d0d;
+    height: 60px;
+  }
+  
+  .menu a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 20px;
+  }
+  
+  .menu a:hover {
+    color: #ad0d0d;
+  }

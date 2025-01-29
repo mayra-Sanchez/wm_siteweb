@@ -1,0 +1,28 @@
+<!-- Filtro de búsqueda -->
+<app-header></app-header>
+<div class="filter-container">
+  <input type="text" [(ngModel)]="searchQuery" (input)="filterProducts()" class="search-input"
+    placeholder="Buscar productos..." />
+
+  <select [(ngModel)]="selectedCategory" (change)="onCategoryChange(selectedCategory)" class="category-select">
+    <option *ngFor="let category of categories" [value]="category.id">
+      {{ category.nombre }}
+    </option>
+  </select>
+</div>
+
+<!-- Contenedor de productos filtrados -->
+<div class="products-container">
+  <div *ngFor="let product of filteredProducts" class="product-card">
+    <img class="product-image" [src]="product.imagen" alt="Imagen del producto">
+    <div class="product-details">
+      <h3>{{ product.nombre }}</h3>
+      <p>{{ product.descripcion }}</p>
+      <p><strong>Precio:</strong> ${{ product.precio }}</p>
+      <button class="btn-ver" (click)="viewProduct(product)">Ver Información</button>
+      <button class="btn-agregar" (click)="addToCart(product)">Agregar al Carrito</button>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

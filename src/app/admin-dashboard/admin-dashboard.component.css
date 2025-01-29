@@ -1,0 +1,19 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    /* Header arriba */
+    height: 100vh;
+}
+
+.dashboard-body {
+    display: flex;
+    /* Sidebar y contenido uno al lado del otro */
+    flex: 1;
+}
+
+
+.dashboard-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}

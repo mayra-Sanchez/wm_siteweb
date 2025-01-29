@@ -1,1 +1,31 @@
-<p>cart works!</p>
+<div class="modal-backdrop" *ngIf="mostrarCarrito">
+    <div class="modal">
+        <div class="modal-header">
+            <h2>Carrito de Compras</h2>
+            <button class="close-btn" (click)="mostrarCarrito = false">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p *ngIf="!carrito?.productos?.length">Tu carrito está vacío.</p>
+            <div *ngFor="let producto of carrito?.productos" class="cart-item">
+                <img [src]="producto.imagen" alt="{{ producto.nombre }}" *ngIf="producto.imagen">
+
+                <div class="cart-details">
+                    <h3>{{ producto.nombre }}</h3>
+                    <p>Cantidad:
+                        <button (click)="decrementarCantidad(producto.id)">-</button>
+                        {{ producto.cantidad }}
+                        <button (click)="incrementarCantidad(producto.id)">+</button>
+                    </p>
+                    <p>Precio: {{ producto.precio * producto.cantidad }} COP</p>
+                </div>
+                <button (click)="removeFromCart(producto.id)">Eliminar</button>
+            </div>
+            <div class="total">
+                <h3>Total: {{ total }} COP</h3>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="buy-btn" (click)="realizarCompra()">Realizar Compra</button>
+        </div>
+    </div>
+</div>
