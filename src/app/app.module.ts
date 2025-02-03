@@ -21,27 +21,15 @@ import { SidebarComponent } from './components/Admin/sidebar/sidebar.component';
 import { ProductmanagementComponent } from './components/Admin/productmanagement/productmanagement.component';
 import { SettingsComponent } from './components/Admin/settings/settings.component';
 import { AuthInterceptor } from './admin-dashboard/services/auth.interceptor';
-<<<<<<< HEAD
-import { HombreComponent } from './hombre/hombre.component';
-import { MujerComponent } from './mujer/mujer.component';
-import { AccesoriosComponent } from './accesorios/accesorios.component';
 import { CarruselHombreComponent } from './carrusel-hombre/carrusel-hombre.component';
 import { CarruselMujerComponent } from './carrusel-mujer/carrusel-mujer.component';
 import { CarruselSaleComponent } from './carrusel-sale/carrusel-sale.component';
 import { TiritaComponent } from './tirita/tirita.component';
 import { VideoComponent } from './video/video.component';
-=======
 import { HombreComponent } from './components/Custom/hombre/hombre.component';
 import { MujerComponent } from './components/Custom/mujer/mujer.component';
 import { AccesoriosComponent } from './components/Custom/accesorios/accesorios.component';
-import { TiritaComponent } from './components/Custom/tirita/tirita.component';
-import { CarruselHombreComponent } from './components/Custom/carrusel-hombre/carrusel-hombre.component';
-import { CarruselMujerComponent } from './components/Custom/carrusel-mujer/carrusel-mujer.component';
-import { CarruselSaleComponent } from './components/Custom/carrusel-sale/carrusel-sale.component';
-import { VideoComponent } from './components/Custom/video/video.component';
 
-
->>>>>>> c8941b4b662f481c575b4c20e572c021d7500192
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,15 +54,7 @@ import { VideoComponent } from './components/Custom/video/video.component';
     HombreComponent,
     MujerComponent,
     AccesoriosComponent,
-<<<<<<< HEAD
-    CarruselHombreComponent,
-    CarruselMujerComponent,
-    CarruselSaleComponent,
     TiritaComponent,
-    VideoComponent
-=======
-    TiritaComponent
->>>>>>> c8941b4b662f481c575b4c20e572c021d7500192
   ],
   imports: [
     BrowserModule,
