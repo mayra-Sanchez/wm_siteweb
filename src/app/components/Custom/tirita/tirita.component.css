@@ -1,0 +1,37 @@
+.sale {
+  position: relative; /* Necesario para el posicionamiento relativo de los elementos dentro */
+}
+
+.tirita {
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px;
+  position: absolute;
+  width: 100%; /* Ajusta el ancho según lo que necesites */
+  text-align: center; /* Centra el texto */
+  animation: moverDeIzqADerecha 10s linear infinite, repetirTexto 10s linear infinite;
+}
+
+
+@keyframes moverDeIzqADerecha {
+  0% {
+    left: -100%; /* Comienza fuera de la pantalla, a la izquierda */
+  }
+  100% {
+    left: 100%; /* Termina fuera de la pantalla, a la derecha */
+  }
+}
+
+@keyframes repetirTexto {
+  0% {
+    content: "SALE";
+  }
+  50% {
+    content: "SALE SALE";
+  }
+  100% {
+    content: "SALE SALE SALE";
+  }
+}

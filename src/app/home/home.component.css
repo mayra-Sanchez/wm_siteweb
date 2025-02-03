@@ -50,7 +50,7 @@ html, body {
    
   .quienesSomos {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Alinea el contenido al inicio (arriba) */
     justify-content: space-between;
     padding: 20px;
     background-color: #ffffff; /* Fondo blanco */
@@ -60,7 +60,9 @@ html, body {
     flex: 1;
     display: flex;
     justify-content: center;
+    align-items: flex-start; /* Alinea la imagen al principio */
   }
+  
   
   .responsive-img {
     max-width: 100%; 
@@ -84,8 +86,11 @@ html, body {
     flex: 1;
     text-align: left;
     padding-left: 20px;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea los elementos al inicio */
   }
+  
   
   .text-container h1 {
     font-size: 32px;
@@ -104,4 +109,25 @@ html, body {
     margin-top: 5px;
   }
   
+  .sale {
+    display: flex !important;
+    flex-direction:column !important;
+    gap: 50px !important;
+    align-items: center !important;
+  }
+  
+  h1 {
+    font-family: 'Open Sans', sans-serif; /* Aplica la fuente Open Sans */
+    font-weight: 600;  /* Hace el texto en negrita */
+    text-align: center; /* Centra el texto horizontalmente */
+    margin: 0; /* Elimina márgenes predeterminados */
+    height: 20px;
+  }
+  
+  
+  
+  .tirita {
+    width: 100px;
+    height: 40px;
+  }
   

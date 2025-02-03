@@ -6,15 +6,11 @@ import { ProductListComponent } from './components/Admin/product-list/product-li
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductFormComponent } from './components/Admin/product-form/product-form.component';
 import { SalesReportComponent } from './components/Admin/sales-report/sales-report.component';
-import { ProductCatalogComponent } from './components/Custom/product-catalog/product-catalog.component';
-import { ProductDetailComponent } from './components/Custom/product-detail/product-detail.component';
 import { CartComponent } from './components/Custom/cart/cart.component';
-import { FavoritesComponent } from './components/Custom/favorites/favorites.component';
-import { PurchaseHistoryComponent } from './components/Custom/purchase-history/purchase-history.component';
 import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { CarruselAccesoriosComponent } from './carrusel-accesorios/carrusel-accesorios.component';
+import { CarruselAccesoriosComponent } from './components/Custom/carrusel-accesorios/carrusel-accesorios.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
@@ -25,20 +21,27 @@ import { SidebarComponent } from './components/Admin/sidebar/sidebar.component';
 import { ProductmanagementComponent } from './components/Admin/productmanagement/productmanagement.component';
 import { SettingsComponent } from './components/Admin/settings/settings.component';
 import { AuthInterceptor } from './admin-dashboard/services/auth.interceptor';
-import { HombreComponent } from './hombre/hombre.component';
-import { MujerComponent } from './mujer/mujer.component';
-import { AccesoriosComponent } from './accesorios/accesorios.component';
+import { HombreComponent } from './components/Custom/hombre/hombre.component';
+import { MujerComponent } from './components/Custom/mujer/mujer.component';
+import { AccesoriosComponent } from './components/Custom/accesorios/accesorios.component';
+import { TiritaComponent } from './components/Custom/tirita/tirita.component';
+import { CarruselHombreComponent } from './components/Custom/carrusel-hombre/carrusel-hombre.component';
+import { CarruselMujerComponent } from './components/Custom/carrusel-mujer/carrusel-mujer.component';
+import { CarruselSaleComponent } from './components/Custom/carrusel-sale/carrusel-sale.component';
+import { VideoComponent } from './components/Custom/video/video.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
+    VideoComponent,
+    CarruselSaleComponent,
+    CarruselHombreComponent,
+    CarruselMujerComponent,
     ProductListComponent,
     ProductFormComponent,
     SalesReportComponent,
-    ProductCatalogComponent,
-    ProductDetailComponent,
     CartComponent,
-    FavoritesComponent,
-    PurchaseHistoryComponent,
     LoginComponent,
     HeaderComponent,
     FooterComponent,
@@ -51,7 +54,8 @@ import { AccesoriosComponent } from './accesorios/accesorios.component';
     SettingsComponent,
     HombreComponent,
     MujerComponent,
-    AccesoriosComponent
+    AccesoriosComponent,
+    TiritaComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +63,7 @@ import { AccesoriosComponent } from './accesorios/accesorios.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [
     {

@@ -102,15 +102,30 @@ export class CartComponent implements OnInit {
 
   realizarCompra(): void {
     if (!this.carrito || !this.carrito.productos || this.carrito.productos.length === 0) return;
-
-    let mensaje = 'Pedido desde la tienda:\n';
+  
+    let mensaje = '📦 *Pedido desde la tienda* 📦\n\n';
     this.carrito.productos.forEach((producto: any) => {
-      mensaje += `- ${producto.nombre} x${producto.cantidad} - ${producto.precio * producto.cantidad} COP\n`;
+      mensaje += `- ${producto.nombre} x${producto.cantidad} -> ${producto.precio * producto.cantidad} COP\n`;
     });
-    mensaje += `Total: ${this.total} COP`;
-
-    // Enviar el mensaje a través de WhatsApp
-    this.carritoService.enviarPedidoWhatsApp(mensaje);
+    mensaje += `\n💰 *Total: ${this.total} COP* 💰`;
+  
+    const numeroWhatsApp = '573218775416'; // Número de WhatsApp de la tienda
+    const url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensaje)}`;
+  
+    this.carritoService.registrarCompra().subscribe({
+      next: () => {
+        window.open(url, '_blank');  // Abre el WhatsApp con el mensaje
+        this.carritoService.limpiarCarrito().subscribe(() => {
+          this.obtenerCarrito();  // Vuelve a cargar el carrito vacío
+        });
+      },
+      error: error => {
+        console.error('Error al registrar la compra:', error);
+      },
+    });
   }
+  
+  
+  
 
 }
