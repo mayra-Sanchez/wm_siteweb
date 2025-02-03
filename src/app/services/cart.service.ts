@@ -11,7 +11,7 @@ export class CartService {
 
   private apiUrl = 'http://127.0.0.1:8000/api';
 
-  constructor(private http: HttpClient, private apiservice: ApiService) {  }
+  constructor(private http: HttpClient, private apiservice: ApiService) { }
 
   private getHeaders(): HttpHeaders {
     const accessToken = localStorage.getItem('access_token');
@@ -30,25 +30,32 @@ export class CartService {
 
   eliminarDelCarrito(productId: number): Observable<any> {
     if (!productId) {
-        return throwError(() => new Error('productId es undefined o nulo'));
+      return throwError(() => new Error('productId es undefined o nulo'));
     }
-    
+
     const accessToken = localStorage.getItem('access_token');
     const headers = new HttpHeaders().set('Authorization', `Bearer ${accessToken}`);
 
     return this.http.delete<any>(`${this.apiUrl}/eliminar_del_carrito/${productId}/`, { headers }).pipe(
-        catchError(error => {
-            console.error('Error al eliminar del carrito:', error);
-            return throwError(() => new Error('No se pudo eliminar del carrito.'));
-        })
+      catchError(error => {
+        console.error('Error al eliminar del carrito:', error);
+        return throwError(() => new Error('No se pudo eliminar del carrito.'));
+      })
     );
-}
+  }
 
-  
+
   enviarPedidoWhatsApp(mensaje: string): Observable<any> {
     const headers = this.getHeaders();
     return this.http.get<any>(`${this.apiUrl}/enviar-carrito/`, { headers }).pipe(
       catchError(this.handleError('enviarPedidoWhatsApp'))
+    );
+  }
+
+  registrarCompra(): Observable<any> {
+    const headers = this.getHeaders();
+    return this.http.post<any>(`${this.apiUrl}/registrar-compra/`, {}, { headers }).pipe(
+      catchError(this.handleError('registrarCompra'))
     );
   }
 
@@ -58,7 +65,7 @@ export class CartService {
 
     const accessToken = localStorage.getItem('access_token');
     if (!accessToken) {
-        return throwError(() => new Error('User not authenticated.'));
+      return throwError(() => new Error('User not authenticated.'));
     }
 
     const headers = new HttpHeaders().set('Authorization', `Bearer ${accessToken}`);
@@ -67,18 +74,30 @@ export class CartService {
     const body = { user_id: userId, product_id: productId };
 
     return this.http.post<any>(`${this.apiUrl}/agregar_al_carrito/${productId}/`, body, { headers }).pipe(
-        catchError(error => {
-            console.error('Error al agregar al carrito:', error);
-            return throwError(() => new Error('No se pudo agregar al carrito.'));
-        })
+      catchError(error => {
+        console.error('Error al agregar al carrito:', error);
+        return throwError(() => new Error('No se pudo agregar al carrito.'));
+      })
     );
-}
+  }
 
-actualizarCantidadProducto(productId: number, cantidad: number): Observable<any> {
-  return this.http.put<any>(`${this.apiUrl}/actualizar-cantidad-producto/${productId}/`, { cantidad });
-}
+  actualizarCantidadProducto(productId: number, cantidad: number): Observable<any> {
+    const headers = this.getHeaders();  // Obtienes los headers con el token de autenticación
+  
+    return this.http.put<any>(`${this.apiUrl}/actualizar-cantidad-producto/${productId}/`, 
+                              { cantidad }, 
+                              { headers }).pipe(
+      catchError(this.handleError('actualizarCantidadProducto'))
+    );
+  }
+  
 
-
+  limpiarCarrito(): Observable<any> {
+    const headers = this.getHeaders();
+    return this.http.delete<any>(`${this.apiUrl}/vaciar-carrito/`, { headers }).pipe(
+      catchError(this.handleError('limpiarCarrito'))
+    );
+  }
 
   private handleError(operation: string) {
     return (error: any) => {

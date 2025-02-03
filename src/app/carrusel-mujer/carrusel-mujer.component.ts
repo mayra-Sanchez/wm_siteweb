@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../admin-dashboard/services/admin.service';
 import { Product } from 'src/app/models/product';
-import { CartService } from '../services/cart.service';
+import { CartService } from '../services/cart.service'; // Importar CartService
 
 @Component({
-  selector: 'app-carrusel-accesorios',
-  templateUrl: './carrusel-accesorios.component.html',
-  styleUrls: ['./carrusel-accesorios.component.css']
+  selector: 'app-carrusel-mujer',
+  templateUrl: './carrusel-mujer.component.html',
+  styleUrls: ['./carrusel-mujer.component.css']
 })
-export class CarruselAccesoriosComponent implements OnInit {
+export class CarruselMujerComponent implements OnInit {
   products: Product[] = [];
-  selectedCategory: number = 3;
+  selectedCategory: number = 2;
   currentIndex: number = 0; // Índice actual del carrusel
   modalOpen: boolean = false; // Controla si el modal está abierto o cerrado
   selectedProduct: Product | null = null; // Producto seleccionado para el modal

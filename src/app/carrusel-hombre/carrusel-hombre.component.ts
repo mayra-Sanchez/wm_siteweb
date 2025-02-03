@@ -4,13 +4,13 @@ import { Product } from 'src/app/models/product';
 import { CartService } from '../services/cart.service';
 
 @Component({
-  selector: 'app-carrusel-accesorios',
-  templateUrl: './carrusel-accesorios.component.html',
-  styleUrls: ['./carrusel-accesorios.component.css']
+  selector: 'app-carrusel-hombre',
+  templateUrl: './carrusel-hombre.component.html',
+  styleUrls: ['./carrusel-hombre.component.css']
 })
-export class CarruselAccesoriosComponent implements OnInit {
+export class CarruselHombreComponent implements OnInit {
   products: Product[] = [];
-  selectedCategory: number = 3;
+  selectedCategory: number = 1;
   currentIndex: number = 0; // Índice actual del carrusel
   modalOpen: boolean = false; // Controla si el modal está abierto o cerrado
   selectedProduct: Product | null = null; // Producto seleccionado para el modal

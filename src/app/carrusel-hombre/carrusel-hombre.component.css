@@ -4,42 +4,42 @@
     max-width: 100%;
     margin: 0 auto;
     overflow: hidden;
-}
-
-.carrusel {
+  }
+  
+  .carrusel {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.producto {
+  }
+  
+  .producto {
     display: none;
     padding: 10px;
     text-align: center;
-}
-
-.producto.active {
+  }
+  
+  .producto.active {
     display: block;
-}
-
-.producto-card {
+  }
+  
+  .producto-card {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px;
-}
-
-.producto-imagen {
+  }
+  
+  .producto-imagen {
     width: 100%;
     height: auto;
     max-width: 300px;
     max-height: 300px;
     object-fit: cover;
     cursor: pointer;
-}
-
-/* Estilo de los botones de navegación */
-.arrow {
+  }
+  
+  /* Estilo de los botones de navegación */
+  .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -50,18 +50,18 @@
     cursor: pointer;
     font-size: 24px;
     z-index: 10;
-}
-
-.left {
+  }
+  
+  .left {
     left: 10px;
-}
-
-.right {
+  }
+  
+  .right {
     right: 10px;
-}
-
-/* Estilos del modal */
-.modal {
+  }
+  
+  /* Estilos del modal */
+  .modal {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,9 +72,9 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     z-index: 1000;
-}
-
-.modal-content {
+  }
+  
+  .modal-content {
     background: white;
     padding: 20px;
     width: 400px;
@@ -82,21 +82,21 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     /* Necesario para posicionar el close-btn dentro de este contenedor */
-}
-
-.modal-product-info {
+  }
+  
+  .modal-product-info {
     text-align: center;
-}
-
-.modal-product-image {
+  }
+  
+  .modal-product-image {
     max-width: 100%;
     height: auto;
     margin-bottom: 15px;
-}
-
-
-/* Botón de cierre dentro del modal */
-.close-btn {
+  }
+  
+  
+  /* Botón de cierre dentro del modal */
+  .close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -105,18 +105,19 @@
     font-size: 30px;
     color: #333;
     cursor: pointer;
-}
-
-/* Botón de agregar al carrito */
-.btn-agregar {
+  }
+  
+  /* Botón de agregar al carrito */
+  .btn-agregar {
     background-color: #28a745;
     color: white;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.btn-agregar:hover {
+  }
+  
+  .btn-agregar:hover {
     background-color: #218838;
-}
+  }
+  

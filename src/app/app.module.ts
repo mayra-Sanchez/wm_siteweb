@@ -28,6 +28,11 @@ import { AuthInterceptor } from './admin-dashboard/services/auth.interceptor';
 import { HombreComponent } from './hombre/hombre.component';
 import { MujerComponent } from './mujer/mujer.component';
 import { AccesoriosComponent } from './accesorios/accesorios.component';
+import { CarruselHombreComponent } from './carrusel-hombre/carrusel-hombre.component';
+import { CarruselMujerComponent } from './carrusel-mujer/carrusel-mujer.component';
+import { CarruselSaleComponent } from './carrusel-sale/carrusel-sale.component';
+import { TiritaComponent } from './tirita/tirita.component';
+import { VideoComponent } from './video/video.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +56,12 @@ import { AccesoriosComponent } from './accesorios/accesorios.component';
     SettingsComponent,
     HombreComponent,
     MujerComponent,
-    AccesoriosComponent
+    AccesoriosComponent,
+    CarruselHombreComponent,
+    CarruselMujerComponent,
+    CarruselSaleComponent,
+    TiritaComponent,
+    VideoComponent
   ],
   imports: [
     BrowserModule,
