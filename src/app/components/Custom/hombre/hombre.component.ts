@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AdminService } from '../admin-dashboard/services/admin.service';
+import { AdminService } from '../../../admin-dashboard/services/admin.service';
 import { Product } from 'src/app/models/product';
-import { Category } from '../models/category';
-import { ApiService } from '../services/api.service';
-import { CartService } from '../services/cart.service';
+import { Category } from '../../../models/category';
+import { ApiService } from '../../../services/api.service';
+import { CartService } from '../../../services/cart.service';
 
 @Component({
   selector: 'app-hombre',

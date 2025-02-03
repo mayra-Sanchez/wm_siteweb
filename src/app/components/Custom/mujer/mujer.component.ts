@@ -1,25 +1,25 @@
-import { Component , OnInit } from '@angular/core';
-import { AdminService } from '../admin-dashboard/services/admin.service';
-import { Product } from '../models/product';
-import { Category } from '../models/category';
+import { Component, OnInit } from '@angular/core';
+import { AdminService } from '../../../admin-dashboard/services/admin.service';
+import { Product } from '../../../models/product';
+import { Category } from '../../../models/category';
 
 @Component({
-  selector: 'app-accesorios',
-  templateUrl: './accesorios.component.html',
-  styleUrls: ['./accesorios.component.css']
+  selector: 'app-mujer',
+  templateUrl: './mujer.component.html',
+  styleUrls: ['./mujer.component.css']
 })
-export class AccesoriosComponent implements OnInit {
+export class MujerComponent implements OnInit {
   products: Product[] = [];
   filteredProducts: Product[] = [];
   categories: Category[] = [];
   searchQuery: string = '';
-  selectedCategory: number = 3; 
+  selectedCategory: number = 2; // Predeterminado para "Mujer"
 
   constructor(private adminService: AdminService) { }
 
   ngOnInit(): void {
     this.loadCategories();
-    this.loadProducts(); 
+    this.loadProducts(); // Cargar los productos de la categoría "Mujer"
   }
 
   loadProducts(): void {

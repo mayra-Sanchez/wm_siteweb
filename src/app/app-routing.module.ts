@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';// Importa tu componente
-import { HombreComponent } from './hombre/hombre.component'; // Importa tu componente
+import { HombreComponent } from './components/Custom/hombre/hombre.component'; // Importa tu componente
 import { AuthGuard } from './auth.guard'; // Asegúrate de importar el guard
 import { HomeComponent } from './home/home.component';
 import { ProductmanagementComponent } from './components/Admin/productmanagement/productmanagement.component';
 import { SalesReportComponent } from './components/Admin/sales-report/sales-report.component';
 import { SettingsComponent } from './components/Admin/settings/settings.component';
-import { MujerComponent } from './mujer/mujer.component';
-import { AccesoriosComponent } from './accesorios/accesorios.component';
+import { MujerComponent } from './components/Custom/mujer/mujer.component';
+import { AccesoriosComponent } from './components/Custom/accesorios/accesorios.component';
 
 const routes: Routes = [
   {
