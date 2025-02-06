@@ -16,6 +16,9 @@ html, body {
 h2, h1 {
   text-align: center;
   color: #333;
+  font-family: 'Open Sans', sans-serif; /* Aplica la fuente Open Sans */
+  font-weight: 600;
+  margin-top: 50px;
 }
 
 .misionVision {
@@ -115,15 +118,6 @@ h2, h1 {
   gap: 50px !important;
   align-items: center !important;
 }
-
-h1 {
-  font-family: 'Open Sans', sans-serif; /* Aplica la fuente Open Sans */
-  font-weight: 600;  /* Hace el texto en negrita */
-  text-align: center; /* Centra el texto horizontalmente */
-  margin: 0; /* Elimina márgenes predeterminados */
-  height: 20px;
-}
-
 
 
 .tirita {
