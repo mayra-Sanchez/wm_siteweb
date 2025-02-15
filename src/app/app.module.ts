@@ -29,6 +29,7 @@ import { VideoComponent } from './video/video.component';
 import { HombreComponent } from './components/Custom/hombre/hombre.component';
 import { MujerComponent } from './components/Custom/mujer/mujer.component';
 import { AccesoriosComponent } from './components/Custom/accesorios/accesorios.component';
+import { WhatsbuttonComponent } from './whatsbutton/whatsbutton.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { AccesoriosComponent } from './components/Custom/accesorios/accesorios.c
     MujerComponent,
     AccesoriosComponent,
     TiritaComponent,
+    WhatsbuttonComponent,
   ],
   imports: [
     BrowserModule,
