@@ -5,33 +5,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
- p {
+p {
     font-size: 20px;
 }
 
 .fa-whatsapp {
     margin-left: 5px;
 }
-  
+
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Distribuye los elementos de izquierda a derecha */
     align-items: center;
     width: 100%;
 }
 
-  
 .contact-info {
     text-align: left;
 }
-  
+
 .contact-info p {
     margin: 5px 0;
     font-size: 20px;
 }
-  
+
 .contact-info i {
     margin-right: 10px;
     color: #fff;
@@ -57,16 +56,24 @@
     height: 200px;
     width: auto;
 }
-  
+
 .links {
     text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-  
+
 .links p {
     margin: 5px 0;
-    
 }
-  
+
+.social-media {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start; /* Los iconos de redes sociales estarán a la izquierda */
+}
+
 .social-media a {
     color: #fff;
     margin: 10px 15px;
@@ -74,26 +81,39 @@
     font-size: 24px;
     transition: transform 0.3s, color 0.3s;
 }
-  
 
 .social-media a:hover {
     transform: scale(1.2);
     color: #ddd;
-}  
-  
+}
+
 .social-media i {
     font-size: 40px;
     cursor: pointer;
     transition: transform 0.3s;
     margin-top: 10px;
 }
-  
+
 .social-media i:hover {
     transform: scale(1.2);
     color: #ad0d0d;
 }
-  
-a{
+
+/* Nueva clase para los métodos de pago */
+.payment-methods {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start; 
+}
+
+.payment-methods img {
+    width: 40px; /* Ajusta el tamaño de los iconos de pago */
+    height: 40px;
+    object-fit: contain;
+    background-color: white;
+}
+
+a {
     text-decoration: none;
     color: white;
 }

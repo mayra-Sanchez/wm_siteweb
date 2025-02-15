@@ -1,16 +1,17 @@
 .whatsapp-btn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-    background-color: #25D366;
-    padding: 10px;
+    bottom: 220px; /* Ajusta este valor según el espacio que necesitas entre el footer y el botón */
+    right: 20px; /* Coloca el botón en la esquina inferior derecha */
+    background-color: #25d366; /* Color de WhatsApp */
     border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .whatsapp-btn img {
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    cursor: pointer;
+}
+
+/* Imagen dentro del botón de WhatsApp */
+.whatsapp-btn img {
     width: 40px;
     height: 40px;
-  }
-  
+}
