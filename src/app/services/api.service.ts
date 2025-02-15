@@ -11,7 +11,9 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class ApiService {
-  private baseUrl = 'http://127.0.0.1:8000/api'; // Base URL de la API
+   //private baseUrl = 'http://127.0.0.1:8000/api'; Base URL de la API
+
+   private baseUrl = 'http://157.230.191.4/api';
 
   constructor(private http: HttpClient, private router: Router) { }
 

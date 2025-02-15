@@ -7,8 +7,11 @@ import { Product } from 'src/app/models/product';
   providedIn: 'root'
 })
 export class AdminService {
-  private apiUrl = 'http://127.0.0.1:8000/api/productos/';
-  private categoriesUrl = 'http://127.0.0.1:8000/api/categorias/';  // Endpoint de categorías
+  //private apiUrl = 'http://127.0.0.1:8000/api/productos/';
+  //private categoriesUrl = 'http://127.0.0.1:8000/api/categorias/';  // Endpoint de categorías
+
+  private apiUrl = 'http://157.230.191.4/api/productos/';
+  private categoriesUrl = 'http://157.230.191.4/api/categorias/';
 
   constructor(private http: HttpClient) { }
 

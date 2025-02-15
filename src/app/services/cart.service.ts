@@ -9,7 +9,9 @@ import { ApiService } from './api.service';
 })
 export class CartService {
 
-  private apiUrl = 'http://127.0.0.1:8000/api';
+  //private apiUrl = 'http://127.0.0.1:8000/api';
+
+  private apiUrl = 'http://157.230.191.4/api';
 
   constructor(private http: HttpClient, private apiservice: ApiService) { }
 
