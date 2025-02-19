@@ -13,7 +13,7 @@ import { BehaviorSubject } from 'rxjs';
 export class ApiService {
    //private baseUrl = 'http://127.0.0.1:8000/api'; Base URL de la API
 
-   private baseUrl = 'https://157.230.191.4/api';
+   private baseUrl = 'https://143.198.171.53/api';
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -138,7 +138,7 @@ export class ApiService {
 
   // Obtener los detalles del usuario autenticado
   getUserDetails(): Observable<any> {
-    return this.http.get<any>('http://127.0.0.1:8000/api/usuario_detalle/');
+    return this.http.get<any>('https://143.198.171.53/api/usuario_detalle/');
   }
 
 }
