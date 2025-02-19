@@ -10,8 +10,8 @@ export class AdminService {
   //private apiUrl = 'http://127.0.0.1:8000/api/productos/';
   //private categoriesUrl = 'http://127.0.0.1:8000/api/categorias/';  // Endpoint de categorías
 
-  private apiUrl = 'https://157.230.191.4/api/productos/';
-  private categoriesUrl = 'https://157.230.191.4/api/categorias/';
+  private apiUrl = 'https://143.198.171.53/api/productos/';
+  private categoriesUrl = 'https://143.198.171.53/api/categorias/';
 
   constructor(private http: HttpClient) { }
 

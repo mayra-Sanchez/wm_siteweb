@@ -11,7 +11,7 @@ export class CartService {
 
   //private apiUrl = 'http://127.0.0.1:8000/api';
 
-  private apiUrl = 'https://157.230.191.4/api';
+  private apiUrl = 'https://143.198.171.53/api';
 
   constructor(private http: HttpClient, private apiservice: ApiService) { }
 
