@@ -13,7 +13,7 @@ import { BehaviorSubject } from 'rxjs';
 export class ApiService {
    //private baseUrl = 'http://127.0.0.1:8000/api'; Base URL de la API
 
-   private baseUrl = 'https://143.198.171.53/api';
+   private baseUrl = 'https://wmsiteweb.xyz/api';
 
   constructor(private http: HttpClient, private router: Router) { }
 
