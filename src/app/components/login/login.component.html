@@ -1,7 +1,7 @@
 <div *ngIf="isModalVisible" class="login-modal">
   <div class="login-container">
     <span class="close-btn" (click)="closeLogin()">×</span>
-    
+
     <h2>{{ isLoginMode ? 'Iniciar Sesión' : 'Regístrate' }}</h2>
 
     <!-- Formulario de Login -->
@@ -14,7 +14,7 @@
           <small class="error">El email es obligatorio y debe ser válido.</small>
         </div>
       </div>
-    
+
       <!-- Contraseña -->
       <div class="input-group">
         <label for="password">Contraseña</label>
@@ -23,11 +23,11 @@
           <small class="error">La contraseña es obligatoria (mínimo 6 caracteres).</small>
         </div>
       </div>
-    
+
       <!-- Botón -->
       <button type="submit">
         Iniciar Sesión
-      </button>         
+      </button>
     </form>
 
     <!-- Formulario de Registro -->
@@ -78,18 +78,20 @@
       </div>
 
       <!-- Rol -->
-      <div class="input-group">
+      <!-- <div class="input-group">
         <label for="rol">Rol</label>
         <select id="rol" formControlName="rol">
           <option value="client">Cliente</option>
           <option value="admin">Administrador</option>
         </select>
-      </div>
-    
+      </div> -->
+      <!-- Rol -->
+      <input type="hidden" formControlName="rol" />
+
       <!-- Botón -->
       <button type="submit">
         Registrarse
-      </button>         
+      </button>
     </form>
 
     <!-- Cambiar entre login/registro -->

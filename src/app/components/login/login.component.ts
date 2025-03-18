@@ -23,6 +23,7 @@ export class LoginComponent {
     });
 
     // Formulario de Registro
+    // Formulario de Registro
     this.registerForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
@@ -30,8 +31,9 @@ export class LoginComponent {
       username: ['', Validators.required],
       first_name: ['', Validators.required],
       last_name: ['', Validators.required],
-      rol: ['client', Validators.required]
+      rol: ['client'] // Valor por defecto establecido a 'client'
     });
+
   }
 
   openLogin() {
@@ -69,7 +71,7 @@ export class LoginComponent {
       return;
     }
     const { email, password, confirmPassword, username, first_name, last_name, rol } = this.registerForm.value;
-    
+
     if (password !== confirmPassword) {
       this.errorMessage = 'Las contraseñas no coinciden';
       return;

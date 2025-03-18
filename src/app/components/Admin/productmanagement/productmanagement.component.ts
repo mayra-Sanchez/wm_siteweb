@@ -36,12 +36,18 @@ export class ProductmanagementComponent implements OnInit {
     });
   }
 
+  // Componente: productmanagement.component.ts
   loadCategories(): void {
     this.adminService.getCategories().subscribe(
-      (data) => (this.categorias = data),
+      (data) => {
+        console.log('Categorías recibidas:', data); // Verificar datos recibidos
+        this.categorias = data;
+      },
       (error) => console.error('Error al cargar las categorías:', error)
     );
   }
+
+
 
   fetchProducts(): void {
     this.adminService.getProducts().subscribe(
